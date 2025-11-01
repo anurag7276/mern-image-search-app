@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import SearchComponent from '../components/SearchComponent';
 import ImageGrid from '../components/ImageGrid';
 import MultiSelectCounter from '../components/MultiSelectCounter';
-
+// home page 
 const HomePage = ({ user }) => {
   const [images, setImages] = useState([]);
   const [selectedImages, setSelectedImages] = useState([]);
