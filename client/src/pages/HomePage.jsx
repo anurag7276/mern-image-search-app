@@ -13,10 +13,8 @@ const HomePage = ({ user }) => {
   const [history, setHistory] = useState([]); 
   const [topSearches, setTopSearches] = useState([]); 
 
-  const serverURL = 'http://localhost:5001';
+  const serverURL = import.meta.env.VITE_SERVER_URL;
 
-  // --- Function to fetch history ---
-  // THIS IS THE CORRECTED LINE:
   const fetchHistory = async () => { 
     try {
       const res = await axios.get(`${serverURL}/api/history`, {
@@ -28,7 +26,7 @@ const HomePage = ({ user }) => {
     }
   };
 
-  // --- Function to fetch top searches ---
+  
   const fetchTopSearches = async () => {
     try {
       const res = await axios.get(`${serverURL}/api/top-searches`, {
@@ -40,13 +38,13 @@ const HomePage = ({ user }) => {
     }
   };
 
-  // --- UseEffect to fetch data on page load ---
+  
   useEffect(() => {
     fetchHistory();
     fetchTopSearches(); 
   }, []); 
 
-  // This function is passed down to SearchComponent
+  
   const handleSearch = (searchResults, term) => {
     setImages(searchResults);
     setLastSearchTerm(term);
@@ -56,7 +54,7 @@ const HomePage = ({ user }) => {
     fetchTopSearches(); 
   };
 
-  // This function is passed down to ImageGrid
+  
   const handleImageSelect = (imageId) => {
     setSelectedImages((prevSelected) => {
       if (prevSelected.includes(imageId)) {
@@ -70,20 +68,20 @@ const HomePage = ({ user }) => {
   return (
     <div style={{ display: 'flex', gap: '20px', padding: '20px' }}>
       
-      {/* --- Main Content Area (Left Side) --- */}
+     
       <div style={{ flex: 3 }}>
         
-        {/* --- Top Searches Banner --- */}
+        
         <TopSearches topSearches={topSearches} />
 
         <h1>Welcome, {user.displayName}!</h1>
         <p>Use the search bar below to find images from Unsplash.</p>
         <hr />
 
-        {/* --- Search Bar --- */}
+        
         <SearchComponent onSearch={handleSearch} />
 
-        {/* --- Results & Counter --- */}
+        
         {images.length > 0 && (
           <>
             <MultiSelectCounter
@@ -100,7 +98,7 @@ const HomePage = ({ user }) => {
         )}
       </div>
 
-      {/* --- Sidebar Area (Right Side) --- */}
+      
       <div style={{ flex: 1, paddingTop: '20px' }}>
         <h3>Search History</h3>
         <UserHistory history={history} />

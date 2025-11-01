@@ -2,11 +2,11 @@ import React from 'react';
 import axios from 'axios';
 
 const Navbar = ({ user }) => {
-  const serverURL = 'http://localhost:5001';
+ const serverURL = import.meta.env.VITE_SERVER_URL;
 
   const logout = async () => {
     try {
-      // We must send credentials to allow the server to clear the session cookie
+      
       await axios.get(`${serverURL}/auth/logout`, { withCredentials: true });
       // Reload the window to clear app state
       window.location.reload();

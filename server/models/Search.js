@@ -6,10 +6,10 @@ const SearchSchema = new Schema({
     type: String,
     required: true,
   },
-  // Link this search to the user who made it
+  
   user: {
     type: Schema.Types.ObjectId,
-    ref: 'User', // This refers to our 'User' model
+    ref: 'User', 
     required: true,
   },
   timestamp: {

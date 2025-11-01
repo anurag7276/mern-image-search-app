@@ -1,13 +1,13 @@
 import React, { useState } from 'react';
 import axios from 'axios';
 
-// We pass 'onSearch' as a prop, which is a function from HomePage
+
 const SearchComponent = ({ onSearch }) => {
   const [term, setTerm] = useState('');
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState(null);
 
-  const serverURL = 'http://localhost:5001';
+ const serverURL = import.meta.env.VITE_SERVER_URL;
 
   const handleSearch = async (e) => {
     e.preventDefault();
@@ -17,14 +17,14 @@ const SearchComponent = ({ onSearch }) => {
     setError(null);
 
     try {
-      // Call our server's /api/search endpoint, sending the session cookie
+      
       const res = await axios.post(
         `${serverURL}/api/search`,
         { term: term },
         { withCredentials: true }
       );
 
-      // Call the function from HomePage, passing the results and term up
+      
       onSearch(res.data.images, term);
     } catch (err) {
       console.error('Search failed', err);

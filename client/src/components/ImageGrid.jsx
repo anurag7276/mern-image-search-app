@@ -1,12 +1,12 @@
 import React from 'react';
 
-// This component receives the list of images and the selection handlers
+
 const ImageGrid = ({ images, selectedImages, onImageSelect }) => {
   return (
     <div style={{
       display: 'grid',
-      // This line below is the fix. The citation markers were removed.
-      gridTemplateColumns: 'repeat(4, 1fr)', // 4-column grid
+      
+      gridTemplateColumns: 'repeat(4, 1fr)', 
       gap: '10px',
       padding: '0 20px',
     }}>

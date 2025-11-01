@@ -8,21 +8,21 @@ const HomePage = ({ user }) => {
   const [selectedImages, setSelectedImages] = useState([]);
   const [lastSearchTerm, setLastSearchTerm] = useState('');
 
-  // This function is passed down to SearchComponent
+ 
   const handleSearch = (searchResults, term) => {
     setImages(searchResults);
     setLastSearchTerm(term);
-    setSelectedImages([]); // Clear selection on new search
+    setSelectedImages([]); 
   };
 
-  // This function is passed down to ImageGrid
+
   const handleImageSelect = (imageId) => {
     setSelectedImages((prevSelected) => {
       if (prevSelected.includes(imageId)) {
-        // If already selected, remove it
+       
         return prevSelected.filter((id) => id !== imageId);
       } else {
-        // If not selected, add it
+        
         return [...prevSelected, imageId];
       }
     });
@@ -35,10 +35,10 @@ const HomePage = ({ user }) => {
 
       <hr />
 
-      {/* --- Search Bar --- */}
+      
       <SearchComponent onSearch={handleSearch} />
 
-      {/* --- Results & Counter --- */}
+      
       {images.length > 0 && (
         <>
           <MultiSelectCounter

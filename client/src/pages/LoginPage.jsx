@@ -1,8 +1,8 @@
 import React from 'react';
 
 const LoginPage = () => {
-  // We will link directly to our server's auth routes
-  const serverURL = 'http://localhost:5001';
+
+  const serverURL = import.meta.env.VITE_SERVER_URL;
 
   const googleLogin = () => {
     window.open(`${serverURL}/auth/google`, '_self');
