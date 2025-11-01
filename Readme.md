@@ -1,6 +1,6 @@
 # Internship Task: MERN + OAuth Image Search App
 
-### 🚀 [View Live Application](https://your-live-app-url.com) 🚀
+### 🚀 [View Live Application](https://mern-image-search-app.vercel.app/) 🚀
 
 
 This is a full-stack MERN (MongoDB, Express, React, Node.js) application built for the UD Studios internship assignment. The application allows authenticated users to search for images using the Unsplash API, view a multi-select grid, see their personal search history, and view the top 5 most popular searches across all users.
