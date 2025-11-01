@@ -97,7 +97,7 @@ To run this project locally, follow these steps:
 
 ```bash
 # 1. Navigate to the server directory
-git clone  urlhere
+git clone  https://github.com/anurag7276/mern-image-search-app.git
 
 cd server
 
