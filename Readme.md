@@ -17,17 +17,20 @@ As required by the assignment, here are screenshots and GIFs demonstrating the a
 ### 1. OAuth Login
 [cite_start]*This shows the login page and the OAuth authentication flow[cite: 45].*
 
-![OAuth Login Page](path/to/your/login-screenshot.png)
-
-
+<img width="1907" height="547" alt="Screenshot 2025-11-01 184324" src="https://github.com/user-attachments/assets/d7a64632-bddc-426b-87ef-e5fc3ccb3ca4" />
 
 
 ### 2. Search Results & Multi-Select &Search History Section
 [cite_start]*This shows the 4-column image grid, the checkbox overlays, and the dynamic "Selected: X images" counter[cite: 47].*
 
-![Search Results and Multi-Select](path/to/your/search-results-screenshot.png)
 
 
+<img width="1920" height="1080" alt="Screenshot (817)" src="https://github.com/user-attachments/assets/07ff1f11-4e5a-4a5e-bd08-9cc5b8c0fd34" />
+
+
+
+
+<img width="1920" height="1080" alt="Screenshot (818)" src="https://github.com/user-attachments/assets/4bbdbd3c-ff1e-41dd-b2a8-1391cea769e2" />
 
 ---
 
