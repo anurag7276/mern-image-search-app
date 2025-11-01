@@ -17,6 +17,8 @@ connectDB();
 // Initialize the Express app
 const app = express();
 
+app.set('trust proxy', 1);
+
 // Middleware
 
 app.use(
@@ -35,7 +37,12 @@ app.use(
     secret: process.env.COOKIE_KEY,
     resave: false,
     saveUninitialized: false,
-    
+    cookie: {
+      secure: true, 
+      sameSite: 'none',
+      httpOnly: true, 
+      maxAge: 1000 * 60 * 60 * 24 * 7 // 7 days
+    }
   })
 );
 
